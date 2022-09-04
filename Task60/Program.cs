@@ -19,6 +19,10 @@ int[,,] GetMatrix(int rowsCount, int columnsCount, int floorCount, int leftRange
             for (int k = 0; k <  matrix.GetLength(2); k++)
             {
                 matrix[i, j, k] = rand.Next(leftRange, rightRange);
+                if(matrix[i, j, k] == matrix[i, j, k])
+                {
+                    matrix[i, j, k] = rand.Next(leftRange, rightRange);
+                }
             }
         }
     }
